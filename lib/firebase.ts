@@ -1,22 +1,26 @@
-import { initializeApp, FirebaseApp } from 'firebase/app';
-// Explicitly import the database module for its side effects to ensure service registration.
-import 'firebase/database';
-import { getDatabase, ref, set, get, update, onValue, DataSnapshot, Database } from 'firebase/database';
-import type { BoardState, Piece } from '../types';
+// Import the functions you need from the SDKs you need
+import { initializeApp, type FirebaseApp } from "firebase/app";
+import { 
+    getDatabase, 
+    ref, 
+    set, 
+    get, 
+    update, 
+    onValue,
+    type Database,
+    type DataSnapshot
+} from "firebase/database";
+import type { Piece, BoardState } from '../types';
 
-// This is a placeholder configuration.
-// To use the online multiplayer feature, you need to:
-// 1. Create a new project on the Firebase website (it's free).
-// 2. Go to Project settings -> General tab.
-// 3. Under "Your apps", click the web icon (</>) to register a new web app.
-// 4. Copy the `firebaseConfig` object you are given and paste it here.
-// 5. In the Firebase console, go to Build -> Realtime Database.
-// 6. Create a database and in the "Rules" tab, set .read and .write to "true" for this demo.
-//    (For a real app, you would want more secure rules).
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCOdQb8Su9wcFaxKjVKoWH35Asnc6yZP5M",
   authDomain: "d-chess-e4eae.firebaseapp.com",
-  databaseURL: "https://d-chess-e4eae-default-rtdb.firebaseio.com",
   projectId: "d-chess-e4eae",
   storageBucket: "d-chess-e4eae.firebasestorage.app",
   messagingSenderId: "364334786915",
