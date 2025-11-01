@@ -1,0 +1,5 @@
+{
+  "name": "3D Volumetric Chess",
+  "description": "An 8x8x8 volumetric 3D chess application. Visualize the game in a 3D space and make moves using 2D layer views, similar to a Lichess-style interface. Built with React, TypeScript, Three.js, and Tailwind CSS.",
+  "requestFramePermissions": []
+}
